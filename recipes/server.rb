@@ -29,7 +29,7 @@ shares["shares"].each do |k,v|
 end
 
 unless node["samba"]["passdb_backend"] =~ /^ldapsam/
-  users = data_bag_item(node["samba"]["users_data_bag"], "shares")
+  users = nil #data_bag_item(node["samba"]["users_data_bag"], "shares")
 end
 
 package value_for_platform(
